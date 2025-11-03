@@ -1,20 +1,25 @@
-const greet = (user) => {
-    console.log(`${user.name} says hello`);
+//let greet = Function;
+let greet;
+//a and b are just placeholders, i give them the value name and greeting in the function
+greet = (name, greeting) => {
+    // name= "John"
+    // greeting = "how are you guys doing?"
+    console.log(`${name} says ${greeting}`);
 };
-const user = {
-    name: "john",
-    uid: 89
+//below is called a fucntion signatuure
+let calc;
+calc = (numOne, numTwo, action) => {
+    if (action === "add") {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
 };
-greet(user);
-const add = (a, b, c) => {
-    console.log(a + b);
-    console.log(c);
+let logDetails;
+logDetails = (student) => {
+    console.log(`${student.name} is ${student.age} years old`);
 };
-add(2, 4, "hm");
-const minus = (a, b) => {
-    return a + b;
-};
-let result = minus(10, 7); //result will infer the datatype from the return
-console.log(result);
+logDetails({ name: "John", age: 34 });
 export {};
 //# sourceMappingURL=sandBox.js.map

@@ -1,27 +1,26 @@
-//type alias
-type stringOrNum = string|number;
-type objWithName = {name:string, uid:stringOrNum};
+//let greet = Function;
+let greet  : (a: string, b:string) => void;
+//a and b are just placeholders, i give them the value name and greeting in the function
+ greet = (name:string, greeting:string) =>{
+  // name= "John"
+  // greeting = "how are you guys doing?"
+  console.log(`${name} says ${greeting}`)
+ }
+ //below is called a fucntion signatuure
+ let calc: (a:number, b:number, c:string) =>number;
+ calc = (numOne: number, numTwo: number, action:string) =>{
+  if(action === "add") {
+    return numOne + numTwo;
+  }else {
+    return numOne - numTwo;
+  }
+ }
 
 
-const greet = (user: objWithName) =>{
-  console.log(`${user.name} says hello`)
-};
-const user = {
-  name:"john",
-  uid: 89
-}
-greet(user);
+ let logDetails:(obj:{name:string, age:number}) =>void;
 
-
-const add = (a: number , b:number, c: stringOrNum) =>{
-console.log(a + b);
-console.log(c);
-}
-add(2, 4, "hm")
-
-
-const minus = (a: number , b:number):number =>{
-  return a+b
-};
-let result  = minus(10, 7) //result will infer the datatype from the return
-console.log(result)
+ type person= {name:string, age:number};//type alias
+ logDetails = (student:person) =>{
+  console.log(`${student.name} is ${student.age} years old`)
+ }
+ logDetails({name:"John", age:34})
