@@ -1,27 +1,16 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-//DYNAMIC TYPES, ANYTYPE
-let age = 25;
-age = true;
-console.log(age);
-age = 34;
-console.log(age);
-age = "many years";
-console.log(age);
-age = {
-    name: "kimdee",
-    age: 34
+let greet;
+greet = () => {
+    console.log("coding is fun until you run into a crazy bug!");
 };
-console.log(age);
-let mixed = [];
-mixed.push(5);
-mixed.push("kim");
-mixed.push([45, 46, 67]);
-mixed.push(false);
-console.log(mixed);
-let vampire;
-vampire = {
-    name: 34,
-    age: "hwjfyryh"
+const add = (a, b, c = 10) => {
+    console.log(a + b);
+    console.log(c);
 };
+add(2, 4);
+const minus = (a, b) => {
+    return a + b;
+};
+let result = minus(10, 7); //result will infer the datatype from the return
+console.log(result);
+export {};
 //# sourceMappingURL=sandBox.js.map

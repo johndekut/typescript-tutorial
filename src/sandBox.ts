@@ -1,29 +1,18 @@
-//DYNAMIC TYPES, ANYTYPE
-let age: any = 25;
+let greet: Function;
 
-age = true;
-console.log(age)
-
-age= 34;
-console.log(age)
-age= "many years"
-console.log(age)
-age= {
-  name: "kimdee", 
-  age: 34
+greet = () =>{
+  console.log("coding is fun until you run into a crazy bug!")
 }
-console.log(age)
 
-let mixed: any[] =[];
-mixed.push(5)
-mixed.push("kim")
-mixed.push([45, 46, 67])
-mixed.push(false)
-console.log(mixed)
-
-
-let vampire : {name:any, age:any}
-vampire = {
-  name:34,
-  age:"hwjfyryh" 
+const add = (a: number , b:number, c: number|string =10) =>{
+console.log(a + b);
+console.log(c);
 }
+add(2, 4)
+
+
+const minus = (a: number , b:number):number =>{
+  return a+b
+};
+let result  = minus(10, 7) //result will infer the datatype from the return
+console.log(result)
