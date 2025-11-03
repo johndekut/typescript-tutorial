@@ -1,17 +1,25 @@
-const anchor = document.querySelector('a');
-if (anchor){
-console.log(anchor.href)
-} else{
-  console.log("error: could not find href")
+//classes
+class Invoice {
+  client: string;
+  details: string;
+  amount: number;
+
+  constructor(c:string, d: string, a:number){
+    this.client = c;
+    this.details = d;
+    this.amount = a;
+  }
+ 
+  format() {
+    return `${this.client} owes ksh${this.amount} for $this.details`;
+  }
+
 }
 
+const invOne = new Invoice('john', "work on the joetes wesbite", 76500)
+const invTwo = new Invoice('kimani', "hosting of kims wesbite", 35500)
 
-
-
-// const form = document.querySelector('.new-item-form');
-// console.log(form);
-// export {};
-
+let invoices:string[] = []
 //grabbing all elemsnts that need interactivity using their ids
 
 document.addEventListener("DOMContentLoaded", () =>{
