@@ -1,7 +1,9 @@
-var character = "muchiri";
-console.log(character);
-var inputs = document.querySelectorAll('input');
-console.log(inputs);
-inputs.forEach(function (input) {
-    console.log(input);
-});
+var character = "jonte";
+var age = 30;
+var isBlack = false;
+//character = 45
+character = "muchiri";
+var circ = function (diameter) {
+    return diameter * Math.PI;
+};
+console.log(circ(34));
