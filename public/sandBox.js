@@ -1,5 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 //DYNAMIC TYPES, ANYTYPE
-var age = 25;
+let age = 25;
 age = true;
 console.log(age);
 age = 34;
@@ -11,14 +13,15 @@ age = {
     age: 34
 };
 console.log(age);
-var mixed = [];
+let mixed = [];
 mixed.push(5);
 mixed.push("kim");
 mixed.push([45, 46, 67]);
 mixed.push(false);
 console.log(mixed);
-var vampire;
+let vampire;
 vampire = {
     name: 34,
     age: "hwjfyryh"
 };
+//# sourceMappingURL=sandBox.js.map
