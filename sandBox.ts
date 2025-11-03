@@ -1,54 +1,29 @@
-//EXPLICIT TYPES
-//initialize a variable, dont give it a value but in the future it will just take strings
-let character :string;
-let age: number;
-let isLoggedIn: boolean;
+//DYNAMIC TYPES, ANYTYPE
+let age: any = 25;
 
-//age = "kimani"
-age = 34;
-isLoggedIn= true;
+age = true;
+console.log(age)
 
-//arrays
-//declare a variable, let it recieve strings and initialzie it as an empty array
-let ninjas: string[] = [];
-//ninjas = [10, 34, 35]
-ninjas = ["alex", "kim"]
-ninjas.push("mark")
-console.log(ninjas)
-
-
-//union types - take more than one data type
-let mixed :(string|number|boolean)[] = [];
-mixed.push("kenneth", 34)
-mixed.push(45)
-mixed.push(true)
-console.log(mixed);
-
-let uid: string|number;
-uid = 123;
-uid= "wjywcwdcweyd"
-console.log(uid)
-
-//objects
-let comrade : object;
-comrade = {
-  name: "jones",
-  age:34,
-  registrationDetails:{
-    school: "dedan kimathi university",
-    isStudent: true
-  }
+age= 34;
+console.log(age)
+age= "many years"
+console.log(age)
+age= {
+  name: "kimdee", 
+  age: 34
 }
-comrade= ["jim"]
-console.log(comrade)
+console.log(age)
 
-let comrade2 : {
-  name:string,
-  age: number,
-  beltColor:string
-}
-comrade2 = {
-  name:"james",
-  age: 34,
-  beltColor: "blue"
+let mixed: any[] =[];
+mixed.push(5)
+mixed.push("kim")
+mixed.push([45, 46, 67])
+mixed.push(false)
+console.log(mixed)
+
+
+let vampire : {name:any, age:any}
+vampire = {
+  name:34,
+  age:"hwjfyryh" 
 }
