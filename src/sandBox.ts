@@ -1,14 +1,23 @@
-let greet: Function;
+//type alias
+type stringOrNum = string|number;
+type objWithName = {name:string, uid:stringOrNum};
 
-greet = () =>{
-  console.log("coding is fun until you run into a crazy bug!")
+
+const greet = (user: objWithName) =>{
+  console.log(`${user.name} says hello`)
+};
+const user = {
+  name:"john",
+  uid: 89
 }
+greet(user);
 
-const add = (a: number , b:number, c: number|string =10) =>{
+
+const add = (a: number , b:number, c: stringOrNum) =>{
 console.log(a + b);
 console.log(c);
 }
-add(2, 4)
+add(2, 4, "hm")
 
 
 const minus = (a: number , b:number):number =>{

@@ -1,12 +1,16 @@
-let greet;
-greet = () => {
-    console.log("coding is fun until you run into a crazy bug!");
+const greet = (user) => {
+    console.log(`${user.name} says hello`);
 };
-const add = (a, b, c = 10) => {
+const user = {
+    name: "john",
+    uid: 89
+};
+greet(user);
+const add = (a, b, c) => {
     console.log(a + b);
     console.log(c);
 };
-add(2, 4);
+add(2, 4, "hm");
 const minus = (a, b) => {
     return a + b;
 };
