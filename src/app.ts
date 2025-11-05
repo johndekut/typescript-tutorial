@@ -29,3 +29,27 @@ list.render(doc, type.value, 'end')
 })
 })
 
+//GENERICS
+const addUID = <T extends {name: string, age:number}>(obj: T) =>{
+  let uid = Math.floor(Math.random() *100);
+  return{...obj, uid};
+}
+let docOne = addUID({name:'John', age: 40});
+// let docTwo = addUID()
+
+console.log(docOne.age);
+
+//GENERICS WITH INTERFACES
+//data could be anything, not specified
+interface Resource <T>{
+  uid: number;
+  resourceName: string;
+  data: T;
+};
+
+const docThree: Resource <string[]> = {
+  uid: 6463,
+  resourceName: "wooden cakes",
+  data: ["james", "alekoo", "Maeriko"]
+}
+console.log(docThree);
