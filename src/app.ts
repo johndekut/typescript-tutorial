@@ -24,12 +24,9 @@ let invoices:Invoice[] = [];
 invoices.push(invOne);
 invoices.push(invTwo);
 
-//all properties are publi - they can be accessed and changed
-invOne.client = "njogu";
-invTwo.amount = 100000;
-
-
-console.log(invoices);
+invoices.forEach(inv =>{
+  console.log(inv.client, inv.details, inv.format());
+});
 
 
 document.addEventListener("DOMContentLoaded", () =>{

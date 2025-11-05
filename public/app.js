@@ -20,10 +20,9 @@ let invoices = [];
 //grabbing all elemsnts that need interactivity using their ids
 invoices.push(invOne);
 invoices.push(invTwo);
-//all properties are publi - they can be accessed and changed
-invOne.client = "njogu";
-invTwo.amount = 100000;
-console.log(invoices);
+invoices.forEach(inv => {
+    console.log(inv.client, inv.details, inv.format());
+});
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector('.new-item-form');
     const type = document.querySelector('#type');
