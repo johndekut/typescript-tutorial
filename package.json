@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "ts-loader": "^9.5.4",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "scripts": {
+  "build": "webpack",
+  "start": "webpack serve"
+}
+
+}
