@@ -19,11 +19,15 @@ const list = new ListTemplate(ul)
 form.addEventListener('submit', (e:Event) =>{
   e.preventDefault(); //reloads by default
 
+  let values:[string, string, number]
+  values= [tofrom.value, details.value, amount.valueAsNumber]
+
+
   let doc: HasFormatter;
   if (type.value === 'invoice'){
-    doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber)
+    doc = new Invoice(...values)
   }else{
-    doc = new Payment(tofrom.value, details.value, amount.valueAsNumber)
+    doc = new Payment(...values)
   }
 list.render(doc, type.value, 'end')
 })
@@ -80,3 +84,15 @@ function getMessage(status: Status) {
 }
 
 console.log(getMessage(Status.NotFound));
+
+//tuples --immutable arrays
+let arr = ["jonte", 45, false];
+arr[0] = 34;
+
+console.log(arr)
+
+let tup:[string, number, boolean] = ["kim", 45, false];
+tup[0] = "james"
+
+let student: [string, number]
+student = ["chun-lee", 6765]
