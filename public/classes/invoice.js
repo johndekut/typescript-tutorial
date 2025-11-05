@@ -1,5 +1,5 @@
 export class Invoice {
-    //shorthand when using access modifiers
+    //this means that this class must follow the structure of the hasFormatter interface
     constructor(client, details, amount) {
         this.client = client;
         this.details = details;
