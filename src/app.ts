@@ -39,17 +39,44 @@ let docOne = addUID({name:'John', age: 40});
 
 console.log(docOne.age);
 
-//GENERICS WITH INTERFACES
-//data could be anything, not specified
+//ENUMS
+enum ResourceType {Book= "BOOK", Author="AUTHOR", Film= "FILM",Director= "DIRECTOR", Starring="STARRING"}
+//their indexes will be used, fisrt is index zero
+//string enums dont turn into numbers
+
+
 interface Resource <T>{
   uid: number;
-  resourceName: string;
+  resourceType: ResourceType;
   data: T;
 };
 
+const docFour: Resource <string>= {
+  uid: 1,
+  resourceType: ResourceType.Film,
+  data: "kawangware"
+}
+
 const docThree: Resource <string[]> = {
   uid: 6463,
-  resourceName: "wooden cakes",
+  resourceType: ResourceType.Director,
   data: ["james", "alekoo", "Maeriko"]
 }
 console.log(docThree);
+console.log(docFour);
+
+//ENUMS in login
+
+enum Status {
+  Success = 200,
+  NotFound = 404,
+  ServerError = 500
+}
+
+function getMessage(status: Status) {
+  if (status === Status.Success) return "Request successful!";
+  if (status === Status.NotFound) return "Page not found.";
+  return "Server error!";
+}
+
+console.log(getMessage(Status.NotFound));

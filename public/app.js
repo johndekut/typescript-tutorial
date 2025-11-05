@@ -30,10 +30,40 @@ const addUID = (obj) => {
 let docOne = addUID({ name: 'John', age: 40 });
 // let docTwo = addUID()
 console.log(docOne.age);
+//ENUMS
+var ResourceType;
+(function (ResourceType) {
+    ResourceType["Book"] = "BOOK";
+    ResourceType["Author"] = "AUTHOR";
+    ResourceType["Film"] = "FILM";
+    ResourceType["Director"] = "DIRECTOR";
+    ResourceType["Starring"] = "STARRING";
+})(ResourceType || (ResourceType = {}));
 ;
+const docFour = {
+    uid: 1,
+    resourceType: ResourceType.Film,
+    data: "kawangware"
+};
 const docThree = {
     uid: 6463,
-    resourceName: "wooden cakes",
+    resourceType: ResourceType.Director,
     data: ["james", "alekoo", "Maeriko"]
 };
 console.log(docThree);
+console.log(docFour);
+//ENUMS in login
+var Status;
+(function (Status) {
+    Status[Status["Success"] = 200] = "Success";
+    Status[Status["NotFound"] = 404] = "NotFound";
+    Status[Status["ServerError"] = 500] = "ServerError";
+})(Status || (Status = {}));
+function getMessage(status) {
+    if (status === Status.Success)
+        return "Request successful!";
+    if (status === Status.NotFound)
+        return "Page not found.";
+    return "Server error!";
+}
+console.log(getMessage(Status.NotFound));
