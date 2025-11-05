@@ -1,3 +1,32 @@
+const jonte = {
+    name: "john",
+    age: 30,
+    speak(words) {
+        console.log(words);
+    },
+    spend(money) {
+        console.log('i spent', money);
+        return money;
+    }
+};
+let kim = {
+    name: "kimani",
+    age: 50,
+    speak(bless) {
+        console.log(bless);
+    },
+    spend(amount) {
+        console.log('i spent', amount);
+        return amount;
+    }
+};
+//using interface in a function
+const greetPerson = (hanna) => {
+    console.log('hello', hanna.name);
+};
+greetPerson(jonte);
+console.log(jonte);
+console.log(kim);
 import { Invoice } from "./classes/invoice";
 //instantiate and give values to c, d and a
 const invOne = new Invoice('john', "work on the joetes wesbite", 76500);

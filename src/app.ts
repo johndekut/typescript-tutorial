@@ -1,3 +1,49 @@
+
+//interfaces - structures an object or a class
+interface isPerson {
+  name:string;
+  age: number;
+  speak(words: string): void;
+  spend(money: number): number;
+}
+const jonte: isPerson = {
+  name: "john",
+  age:30,
+  speak(words: string):void {
+      console.log(words);
+  },
+  spend(money:number){
+    console.log('i spent', money);
+    return money;
+  }
+}
+
+let kim: isPerson = {
+  name: "kimani",
+  age:50,
+  speak(bless: string):void {
+      console.log(bless);
+  },
+  spend(amount:number){
+    console.log('i spent', amount);
+    return amount;
+  }
+}
+
+//using interface in a function
+const greetPerson = (hanna: isPerson) =>{
+  console.log('hello', hanna.name);
+}
+greetPerson(jonte)
+console.log(jonte);
+console.log(kim);
+
+
+
+
+
+
+
 import { Invoice } from "./classes/invoice";
 
 //instantiate and give values to c, d and a
