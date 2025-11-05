@@ -3,7 +3,7 @@ class Invoice {
   client: string;
   details: string;
   amount: number;
-
+//constructor runs when you create a new Invoice
   constructor(c:string, d: string, a:number){
     this.client = c;
     this.details = d;
@@ -11,16 +11,26 @@ class Invoice {
   }
  
   format() {
-    return `${this.client} owes ksh${this.amount} for $this.details`;
+    return`${this.client} owes ksh${this.amount} for ${this.details}`;
   }
 
 }
-
+//instantiate and give values to c, d and a
 const invOne = new Invoice('john', "work on the joetes wesbite", 76500)
 const invTwo = new Invoice('kimani', "hosting of kims wesbite", 35500)
 
-let invoices:string[] = []
+let invoices:Invoice[] = [];
 //grabbing all elemsnts that need interactivity using their ids
+invoices.push(invOne);
+invoices.push(invTwo);
+
+//all properties are publi - they can be accessed and changed
+invOne.client = "njogu";
+invTwo.amount = 100000;
+
+
+console.log(invoices);
+
 
 document.addEventListener("DOMContentLoaded", () =>{
   const form = document.querySelector('.new-item-form') as HTMLFormElement ;
