@@ -13,6 +13,6 @@ export class Invoice implements HasFormatter{
   }
   
   format() {
-    return`${this.client} owes ksh${this.amount} for ${this.details}`;
+    return`${this.client} owes ksh ${this.amount} for ${this.details}`;
   }
 }

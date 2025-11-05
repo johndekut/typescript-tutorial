@@ -5,6 +5,6 @@ export class Payment {
         this.amount = amount;
     }
     format() {
-        return `${this.recipient} is owed ksh${this.amount} for ${this.details}`;
+        return `${this.recipient} is owed ksh ${this.amount} for ${this.details}`;
     }
 }
