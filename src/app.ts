@@ -1,16 +1,28 @@
 //classes
+
+//access modifiers
+//public - can be accessed and changed inside/outside the class
+//private - only read and access it inside the class scope
+//read-only - can be accessed inside or outside the class but cant be changed
 class Invoice {
-  client: string;
-  details: string;
-  amount: number;
+//   readonly client: string;
+//   private details: string;
+//  private amount: number;
 //constructor runs when you create a new Invoice
-  constructor(c:string, d: string, a:number){
-    this.client = c;
-    this.details = d;
-    this.amount = a;
+
+
+//shorthand when using access modifiers
+  constructor(
+    readonly client: string,
+    private details : string,
+    public amount: number
+
+  ){
+  
   }
- 
+ //private component can be accessed inside the class, but not outside this fn
   format() {
+    //this.client = "makao"  --cant work(readonly)
     return`${this.client} owes ksh${this.amount} for ${this.details}`;
   }
 
@@ -25,7 +37,7 @@ invoices.push(invOne);
 invoices.push(invTwo);
 
 invoices.forEach(inv =>{
-  console.log(inv.client, inv.details, inv.format());
+  console.log(inv.client, inv.format());
 });
 
 
